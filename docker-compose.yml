@@ -1,0 +1,12 @@
+services:
+  fuseki:
+    image: stain/jena-fuseki
+    container_name: book-fuseki
+    ports:
+      - "3030:3030"
+    environment:
+      - ADMIN_PASSWORD=admin
+      - FUSEKI_DATASET_1_NAME=books
+    volumes:
+      - ./fuseki-data:/fuseki
+    restart: unless-stopped
