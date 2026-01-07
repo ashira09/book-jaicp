@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 app = Flask(__name__)
-SPARQL_ENDPOINT = "http://localhost:3030/books/sparql"  # ← замените на ваш Fuseki URL
+SPARQL_ENDPOINT = "https://jena-fuseki-4hhh.onrender.com/books/sparql"  # ← замените на ваш Fuseki URL
 
 GENRE_MAP = {
     "Фантастика": "http://www.semanticweb.org/vecni/ontologies/2026/0/book-recommender-ontology#Fantasy",
